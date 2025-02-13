@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>valentines</title>
+        <style>
+            #yes {
+                position: absolute;
+                left: 45%;
+                top: 68%;
+                padding: 10px 20px;
+                font-size: 12px;
+                font-family: 'Indie Flower',cursive;
+                font-weight: bold;
+                color: whitesmoke;
+                background-color: crimson;
+                border-color: transparent;
+                border-radius: 5px;
+                cursor: pointer;
+            }
+            #no {
+                position: absolute;
+                left: 50%;
+                top: 68%;
+                padding: 10px 20px;
+                font-size: 12px;
+                font-family: 'Indie Flower',cursive;
+                font-weight: bold;
+                color: whitesmoke;
+                background-color: crimson;
+                border-color: transparent;
+                border-radius: 5px;
+                cursor: pointer;
+            }
+            body {
+                background-image: url('public/heartbg.gif');
+                background-size: cover;
+                background-position: center;
+                background-repeat: no-repeat;
+                background-attachment: fixed;
+                font-family: 'Indie Flower', cursive;
+            }
+        </style>
+    </head>
+    <body>
+        <div id="btns">
+            <h1 style="text-align: center; padding-top: 16%;">Will you be my valentines? </h1>
+            <button id="yes">Yes</button>
+            <button id="no">No</button>
+        </div>
+        <script>
+            document.getElementById("yes").onclick = function() {
+                alert("yeah!")
+                window.location.href = "after-yes.html"
+            }
+            const no = document.getElementById("no");
+
+            no.onmouseover = function() {
+                const maxWidth = window.innerWidth - no.offsetWidth; 
+                const maxHeight = window.innerHeight - no.offsetHeight;
+
+                //generate random x and y positions
+                const randomX = Math.floor(Math.random() * maxWidth);
+                const randomY = Math.floor(Math.random() * maxHeight);
+
+                //new positions
+                no.style.left = randomX + "px";
+                no.style.top = randomY + "px";
+            }
+        </script>
+    </body>
+</html>

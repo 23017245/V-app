@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title></title>
+        <style>
+            h1 {
+                font-family: 'Indie Flower', cursive;
+                font-size: 38px;
+                margin-bottom: 20px;
+            }
+            #flower {
+                max-width: 500px;
+                max-height: 500px;
+                padding-left: 35%;
+                padding-top: 0%;
+            }
+            #arrow {
+                max-width: 80px;
+                max-height: 80px;
+                padding-left: 46%;
+                padding-top: 0%;
+                cursor: pointer;
+            }
+            body {
+                background-color: antiquewhite;
+            }
+            #click-me {
+                font-family: 'Indie Flower', cursive;
+                font-size: 12px;
+                padding-top: 40px;
+                margin-bottom: 15px;
+                padding-left: 46.5%;
+            }
+
+        </style>
+    </head>
+    <body>
+        <h1 style="text-align: center; padding-top: 20px;">For Klist <3</h1>
+        <img id="flower" src="public/flower v2.gif" alt="image of flower">
+        <div>
+            <p id="click-me">Click Here!</p>
+            <img id="arrow" src="public/arrow.gif">
+        </div>
+        <script>
+            document.getElementById("arrow").onclick = function() {
+                window.location.href = "next-page.html"
+            }
+        </script>
+    </body>
+</html>
